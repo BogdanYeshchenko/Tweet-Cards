@@ -6,7 +6,11 @@ const HomePage = () => {
   return (
     <Conteiner>
       <ConteinerCenter>
-        <div className="homeMeinBox">HomePage</div>
+        <div className="homeMeinBox">
+          <p>Home Page</p>
+          <p>go to</p>
+          <p style={{ fontSize: "60px" }}>Tweets Cards</p>
+        </div>
       </ConteinerCenter>
     </Conteiner>
   );
