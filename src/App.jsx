@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
         </Route>
       </Routes>
-      {/* <Navigate to="/tweets-cards" /> */}
+      <Navigate to="/tweets-cards" />
     </>
   );
 }
