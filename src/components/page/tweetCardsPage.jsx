@@ -31,9 +31,9 @@ const TweetCardsPageBox = () => {
   const filteredUsers = () => {
     switch (filter) {
       case "follow":
-        return users.filter((user) => !followingStatus[user.id]);
-      case "followings":
         return users.filter((user) => followingStatus[user.id]);
+      case "followings":
+        return users.filter((user) => !followingStatus[user.id]);
       default:
         return users;
     }
