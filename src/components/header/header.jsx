@@ -9,12 +9,12 @@ function Header() {
       <ConteinerCenter>
         <nav className="nav">
           <>
-            <NavLink className="nav-link" to={"/tweets-cards"}>
-              Tweets Cards
-            </NavLink>
-
             <NavLink className="nav-link" to={"/"}>
               Home
+            </NavLink>
+
+            <NavLink className="nav-link" to={"/tweets-cards"}>
+              Tweets Cards
             </NavLink>
           </>
         </nav>
