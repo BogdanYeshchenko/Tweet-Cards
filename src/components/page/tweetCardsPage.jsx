@@ -5,10 +5,10 @@ import { getUsers } from "../../redux/users/usersOperations";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import { changeFollowingStatus } from "../../redux/followingStatus/followingStatusSlice";
-import ConteinerCenter from "../../components/conteiner/ConteinerCenter";
-import Conteiner from "../../components/conteiner/Conteiner";
-import TweetCard from "../../components/tweetCards/tweetCard";
-import Button from "../../components/button/button";
+import ConteinerCenter from "../conteiner/ConteinerCenter";
+import Conteiner from "../conteiner/Conteiner";
+import TweetCard from "../tweetCards/tweetCard";
+import Button from "../button/button";
 import PulseLoader from "react-spinners/PulseLoader";
 
 const TweetCardsPageBox = () => {

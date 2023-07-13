@@ -16,7 +16,7 @@ const TweetCard = ({ user, isFollowing, updateFollowingStatus }) => {
       <div className="logoBox">
         <div className="rectangle"></div>
         <div className="logoBorder">
-          <img alt="../../../public/Hansel.png" />
+          <img src={user?.avatar} alt="User avatar" />
         </div>
       </div>
       <div className="textCards" style={{ marginBottom: 16 }}>

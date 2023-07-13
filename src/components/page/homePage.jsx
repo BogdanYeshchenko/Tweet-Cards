@@ -1,6 +1,6 @@
 import "./homePage.css";
-import ConteinerCenter from "../../components/conteiner/ConteinerCenter";
-import Conteiner from "../../components/conteiner/Conteiner";
+import ConteinerCenter from "../conteiner/ConteinerCenter";
+import Conteiner from "../conteiner/Conteiner";
 
 const HomePage = () => {
   return (
