@@ -14,6 +14,7 @@ import PulseLoader from "react-spinners/PulseLoader";
 const TweetCardsPageBox = () => {
   const dispatch = useDispatch();
   const [visibleCount, setVisibleCount] = useState(3);
+  const [filter, setFilter] = useState("show all");
 
   const followingStatus = useSelector((state) => state.followingStatus);
   const isLoading = useSelector((state) => state.users.isLoading);
@@ -27,21 +28,51 @@ const TweetCardsPageBox = () => {
     await dispatch(changeFollowingStatus({ userId, isFollowing }));
   };
 
+  const filteredUsers = () => {
+    switch (filter) {
+      case "follow":
+        return users.filter((user) => !followingStatus[user.id]);
+      case "followings":
+        return users.filter((user) => followingStatus[user.id]);
+      default:
+        return users;
+    }
+  };
+
   return (
     <Conteiner>
       <ConteinerCenter>
+        <div>
+          <select
+            className="selectBox"
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+          >
+            <option className="selectText" value="show all">
+              Show All
+            </option>
+            <option className="selectText" value="follow">
+              Follow
+            </option>
+            <option className="selectText" value="followings">
+              Followings
+            </option>
+          </select>
+        </div>
         {isLoading ? (
           <PulseLoader size={25} color="#36d7b7" />
         ) : (
           <div className="tweetCardsPageBox">
-            {users.slice(0, visibleCount).map((user) => (
-              <TweetCard
-                key={user.id}
-                user={user}
-                isFollowing={followingStatus[user.id]}
-                updateFollowingStatus={updateFollowingStatus}
-              />
-            ))}
+            {filteredUsers()
+              .slice(0, visibleCount)
+              .map((user) => (
+                <TweetCard
+                  key={user.id}
+                  user={user}
+                  isFollowing={followingStatus[user.id]}
+                  updateFollowingStatus={updateFollowingStatus}
+                />
+              ))}
           </div>
         )}
 
