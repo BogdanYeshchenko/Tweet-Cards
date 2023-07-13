@@ -77,7 +77,7 @@ const TweetCardsPageBox = () => {
         )}
 
         <div>
-          {visibleCount < users.length && (
+          {visibleCount < filteredUsers().length && (
             <Button
               text="Load More"
               onClick={() => setVisibleCount(visibleCount + 3)}
