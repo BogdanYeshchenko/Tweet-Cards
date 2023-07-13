@@ -20,4 +20,10 @@
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
+  background: var(--colorButton);
+}
+
+.meinButtonBox:hover,
+.meinButtonBox:focus {
+  background: var(--colorButtonHover);
 }

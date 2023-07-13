@@ -1,7 +1,11 @@
-import './conteinerCenter.css';
+import "./conteinerCenter.css";
 
-const ConteinerCenter = ({ children }) => {
-  return <div className="conteinerCenter">{children}</div>;
+const ConteinerCenter = ({ children, flexDirection = "column" }) => {
+  return (
+    <div className="conteinerCenter" style={{ flexDirection }}>
+      {children}
+    </div>
+  );
 };
 
 export default ConteinerCenter;
