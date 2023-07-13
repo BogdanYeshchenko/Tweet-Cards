@@ -1,7 +1,12 @@
 import "./button.css";
+// import { useState, useEffect } from "react";
 
 const Button = ({ isActive, onClick, text }) => {
-  const colorButton = isActive ? "#5CD3A8" : "#EBD8FF";
+  // const [colorButton, setColorButton] = useState("#EBD8FF");
+
+  // useEffect(() => {
+  //   isActive ? setColorButton("#5CD3A8") : setColorButton("#EBD8FF");
+  // }, [isActive]);
 
   const colorButtonHover = "#5cd3a8";
 
@@ -10,8 +15,9 @@ const Button = ({ isActive, onClick, text }) => {
       onClick={onClick}
       type="button"
       style={{
-        "--colorButton": colorButton,
-        "--colorButtonHover": colorButtonHover,
+        backgroundColor: isActive ? "#5CD3A8" : "#EBD8FF",
+        // "--colorButton": colorButton,
+        // "--colorButtonHover": colorButtonHover,
       }}
       className="meinButtonBox"
     >

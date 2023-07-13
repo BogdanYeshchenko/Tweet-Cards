@@ -23,8 +23,8 @@ const TweetCardsPageBox = () => {
     dispatch(getUsers());
   }, [dispatch]);
 
-  const updateFollowingStatus = (userId, isFollowing) => {
-    dispatch(changeFollowingStatus({ userId, isFollowing }));
+  const updateFollowingStatus = async (userId, isFollowing) => {
+    await dispatch(changeFollowingStatus({ userId, isFollowing }));
   };
 
   return (
