@@ -62,7 +62,7 @@ const TweetCardsPageBox = () => {
         {isLoading ? (
           <PulseLoader size={25} color="#36d7b7" />
         ) : (
-          <div className="tweetCardsPageBox">
+          <ul className="tweetCardsPageBox">
             {filteredUsers()
               .slice(0, visibleCount)
               .map((user) => (
@@ -73,7 +73,7 @@ const TweetCardsPageBox = () => {
                   updateFollowingStatus={updateFollowingStatus}
                 />
               ))}
-          </div>
+          </ul>
         )}
 
         <div>

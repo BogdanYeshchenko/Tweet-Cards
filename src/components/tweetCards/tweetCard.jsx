@@ -11,7 +11,7 @@ const TweetCard = ({ user, isFollowing, updateFollowingStatus }) => {
   };
 
   return (
-    <div className="meinTweetBox">
+    <li className="meinTweetBox">
       <div className="pictureTC"></div>
       <div className="logoBox">
         <div className="rectangle"></div>
@@ -37,7 +37,7 @@ const TweetCard = ({ user, isFollowing, updateFollowingStatus }) => {
         onClick={onSignUp}
         text={isFollower ? "Following" : "Follow"}
       />
-    </div>
+    </li>
   );
 };
 
